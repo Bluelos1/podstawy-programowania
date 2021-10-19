@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 
-
-
 auto pytanie(std::string prompt) -> int
 {
 int n;
@@ -21,60 +19,64 @@ auto dodawanie ( int a, int b) -> int
 }
 
 auto mnozenie ( int a, int b) -> int
-    {
-        int c;
-        c = a * b;
-        return c;
-    }
-    auto dzielenie(int a, int b)->int
-    {
-        int c;
-        c = a / b;
-        return c;
-    }
-    auto odejmowanie(int a, int b)->int
-    {
-        int c;
-        c = a - b;
-        return c;
-    }
-    auto znak(std::string prompt)->std::string
-    {
-        std::string a;
-        std::cout << prompt << ":\n";
-        std::cin >> a;
-        return a;
-    }
+{
+    int c;
+    c = a * b;
+    return c;
+}
 
-    auto main()->int
-    {
-        int a, b, c ;
-        std::string dzialanie;
-        a = pytanie("podaj pierwsza liczbe");
-        b                       = pytanie("podaj druga liczbe");
-        dzialanie               = znak("jaki znak dzialania? (/,+,-,*) \n");
+auto dzielenie(int a, int b)->int
+{
+    int c;
+    c = a / b;
 
-        if (dzialanie == "+") {
-            c = dodawanie(a, b);
+    return c;
+}
+
+auto odejmowanie(int a, int b)->int
+{
+    int c;
+    c = a - b;
+    return c;
+}
+
+auto znak(std::string prompt)->std::string
+{
+    std::string a;
+    std::cout << prompt << ":\n";
+    std::cin >> a;
+    return a;
+}
+
+auto main()->int
+{
+    int a, b, c ;
+    std::string dzialanie;
+    a = pytanie("podaj pierwsza liczbe");
+    b = pytanie("podaj druga liczbe");
+    dzialanie = znak("jaki znak dzialania? (/,+,-,*) \n");
+
+    if (dzialanie == "+") {
+        c = dodawanie(a, b);
+        std::cout << "wynik: \n" << c;
+    } else if (dzialanie == "*") {
+        c = mnozenie (a, b);
+        std::cout << "wynik: \n" << c;
+    } else if (dzialanie == "-") {
+        c = odejmowanie(a, b);
+        std::cout << "wynik: \n" << c;
+    } else if (dzialanie == "/") {
+        if (b != 0) {
+            c = dzielenie(a, b);
             std::cout << "wynik: \n" << c;
-        } else if (dzialanie == "*") {
-            c = mnozenie (a, b);
-            std::cout << "wynik: \n" << c;
-        } else if (dzialanie == "-") {
-            c = odejmowanie(a, b);
-            std::cout << "wynik: \n" << c;
-        } else if (dzialanie == "/") {
-            if (b != 0) {
-                c = dzielenie(a, b);
-                std::cout << "wynik: \n" << c;
-            } else {
-                std::cout << "błą∂ \n";
-            }
         } else {
-            std::cout << "nieprawidłowy znak";
+            std::cout << "błą∂ \n";
         }
-        return 0;
+    } else {
+        std::cout << "nieprawidłowy znak";
     }
+    return 0;
+}
 
 
 

@@ -12,6 +12,9 @@
 *.snm
 *.toc
 *.vrb
+cmake-build-debug
+CMakeLists.txt
+*.dSYM
 
 *.pdf
 
