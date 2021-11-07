@@ -14,5 +14,6 @@ struct czas
 };
 std::string czas::ToString() const
 {
-std::string czas(godzina + ":" + minuta + ":" + sekunda);
+std::string czas(std::to_string(godzina) + ":" + std::to_string(minuta) + ":" + std::to_string(sekunda);
+return czas
 }
