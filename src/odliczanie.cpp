@@ -9,9 +9,9 @@ auto main (int argc, char* argv[]) -> int
 	a = stoi(b);
 if(argc == 2)
 {
-for (a ; a>=0 ; a--)
+for (int i = a ; i>=0 ; i--)
 {
-	std::cout << a << "\n";
+	std::cout << i << "...\n";
 }
 }
 else 
