@@ -10,10 +10,11 @@ auto pytanie() -> std::string
 }
 
 
-auto main() ->int
+auto main(int argc, char* argv[1]) ->int
 {
+	auto i = 1;
 std::string haslo,wpisane;
-haslo = "student";
+haslo = argv[i];
 
 	do {
 		wpisane = pytanie(); 
