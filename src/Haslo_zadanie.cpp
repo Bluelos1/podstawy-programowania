@@ -1,27 +1,26 @@
 #include <iostream>
 #include <string>
 
-auto pytanie() -> std::string
-{
-	std::string slowo;
-	std::cout << "podaj haslo: ";
-	std::cin >> slowo;
-	return slowo;
+auto main (int argc,char* argv[]) -> int{
+
+auto const haslo = std::string{argv[1]};
+auto haslobl = std::string{};
+
+if (argc==2){
+	do{
+		std::cout<<"password:";
+		std::cin>>haslobl;
+	}
+		while(haslo != haslobl);
+		std::cout << "ok!" <<"\n";
+}else{
+	std::cout<<"podaj jeden argument\n";
 }
-
-
-auto main(int argc, char* argv[1]) ->int
-{
-	auto i = 1;
-std::string haslo,wpisane;
-haslo = argv[i];
-
-	do {
-		wpisane = pytanie(); 
-		} while (wpisane != haslo);
-		std::cout << "ok";
+return 0;
+	}
+	
 
 
 
 
-}
+
