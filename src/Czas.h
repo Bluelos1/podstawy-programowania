@@ -13,20 +13,27 @@ struct czas
 
 
 
-enum class time_of_day
+enum class Time_of_day
 {
 	Rano,
 	dzien,
 	wieczor,
 	noc
 };
-auto time_of_day() const -> time_of_day;
-auto to_string(time_of_day) -> std::string;
-czas(int godzina, int minuta, int sekunda);
-};
+auto time_of_day() const -> Time_of_day;
+auto to_string(Time_of_day) -> std::string;
 
-std::string czas::ToString() const
-{
-std::string czas(std::to_string(godzina) + ":" + std::to_string(minuta) + ":" + std::to_string(sekunda));
-return czas;
-}
+auto operator+(czas const&) const -> czas;
+    auto operator-(czas const&) const -> czas;
+    auto operator<(czas const&) const -> bool;
+    auto operator>(czas const&) const -> bool;
+    auto operator==(czas const&) const -> bool;
+    auto operator!=(czas const&) const -> bool;
+
+    auto count_seconds() const -> uint64_t;
+    auto count_minutes() const -> uint64_t;
+    auto time_to_midnight() const -> czas;
+
+
+    czas(int godzina, int minuta, int sekunda);
+};
