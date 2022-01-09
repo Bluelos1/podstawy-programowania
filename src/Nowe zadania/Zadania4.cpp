@@ -28,8 +28,8 @@ auto main() -> int
 
     }
 
-    std::cout << "Imion zenskich jest: " << zenskie << std::endl;
-    std::cout << "Imion meskich jest: " << meskie << std::endl;
+    std::cout << "Imion zenskich jest: " << zenskie << "\n";
+    std::cout << "Imion meskich jest: " << meskie << "\n";
 
     return 0;
 }

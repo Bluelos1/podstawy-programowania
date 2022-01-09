@@ -39,9 +39,12 @@ student* najlepszy_student(std::vector<student>* in)
 auto main () -> int
 {
 	student* najlepszy;
+	student jan {"Jan","Gontarewski",{4,5,5,4}};
+	student karol{"Karol","ciepluch",{3,3,5,5}};
+	student marcin{"marcin","kukus",{4,4,3,5}};
 	student Mateusz{"Mateusz","Placha",{3,4,2,2}};
 	student Kacper {"Kacper","Kedzier",{4,4,5,4}};
-	std::vector<student> vec={Mateusz,Kacper};
+	std::vector<student> vec={Mateusz,Kacper,jan,karol,marcin};
 
 	najlepszy = najlepszy_student(&vec);
 	std::cout << najlepszy ->imie<<"\n" << najlepszy -> srednia();

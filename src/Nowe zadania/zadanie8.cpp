@@ -12,6 +12,6 @@ auto ntyznak(std::string wyraz, int liczba) -> std::string
 
 int main()
 {
-    std::cout << ntyznak("pianino", 3);
+    std::cout << ntyznak("rabarbarab", 2);
     return 0;
 }

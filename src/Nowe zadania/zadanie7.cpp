@@ -6,7 +6,7 @@ auto count_chars(std::string, char) -> int;
 
 auto main() -> int
 {
-    std::cout << count_chars("rabarbar",'b');
+    std::cout << count_chars("rabarbar",'a');
 
     return 0;
 }
