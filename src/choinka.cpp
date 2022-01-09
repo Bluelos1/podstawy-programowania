@@ -2,7 +2,7 @@
 #include <string>
 
 
-auto main() -> int
+int main() 
 {
     int a, b;
     std::cout << "podaj wysokość: ";
